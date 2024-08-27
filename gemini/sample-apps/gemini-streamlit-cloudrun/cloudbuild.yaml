@@ -1,0 +1,15 @@
+gcr.io/my-project-demo-381318/github.com/emailandy/generative-ai:$COMMIT_SHA
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+    - 'build'
+    - '-t'
+    - 'gcr.io/my-project-demo-381318/github.com/emailandy/cloud_run_sample:v1'
+    - '.'
+  dir: 'gemini/sample-apps/gemini-streamlit-cloudrun'
+
+images:
+  - 'gcr.io/my-project-demo-381318/github.com/emailandy/cloud_run_sample:v1'
