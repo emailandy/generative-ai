@@ -1,4 +1,3 @@
-gcr.io/my-project-demo-381318/github.com/emailandy/generative-ai:$COMMIT_SHA
 
 options:
   logging: CLOUD_LOGGING_ONLY
